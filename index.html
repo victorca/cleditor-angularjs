@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="editor">
+	<head>
+		<title>Directive CLEditor</title>
+
+		<link href="css/jquery.cleditor.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+
+		<strong>Model content:</strong> {{content}}
+
+		<br><br>
+		<textarea cleditor ng-model="content"></textarea>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.cleditor.js"></script>
+
+		<script src="js/angular.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
