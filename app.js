@@ -23,11 +23,14 @@ app.directive('cleditor', function () {
 			elm.cleditor().change(function(){
 				var value = elm.val();
 
-				if (!scope.$$phase) {
-					scope.$apply(function () {
-						ngModel.$setViewValue(value);
-					});
-				}
+				window
+				.setTimeout(
+					function () {
+						scope.$apply(function () {
+							ngModel.$setViewValue(value);
+						});
+					}
+				);
 			});
 		}
 	}
